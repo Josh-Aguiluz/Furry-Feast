@@ -1,0 +1,1579 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Slab", serif;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+    background-color: #FDF8E5;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #FDF8E5;
+    font-weight: bold;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    margin-left: 100px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 100px;
+    font-size: 30px;
+}
+
+nav ul li:last-child {
+    margin-right: 200px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+nav {
+    position: relative;
+    /* Ensure the nav is the reference point for absolute positioning */
+}
+
+/* Mobile */
+/* burger FOR MOBILE */
+.burger {
+    display: none;
+    /* Ensure it's visible on mobile */
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 20px;
+    /* Adjust margin for spacing */
+}
+
+.mobile-nav {
+    display: none;
+    /* Hidden by default */
+    flex-direction: column;
+    position: absolute;
+    top: 125%;
+    right: 500px;
+    /* Align to the right */
+    background-color: #F08A39 !important;
+    /* Orange background */
+    width: 900%;
+    left: 0px;
+    z-index: 500;
+}
+
+.mobile-nav li {
+    margin: 0;
+
+}
+
+.mobile-nav li a {
+    display: block;
+    /* Make links block elements */
+    padding: 15px;
+    /* Padding around links */
+    color: black;
+    /* Text color */
+    text-align: left;
+    /* Align text to the left */
+    font-size: 18px;
+    /* Font size */
+    width: 200%;
+    color: white;
+}
+
+/* pase here again the x */
+
+
+.mobile-nav.show {
+    display: flex;
+    /* Show when toggled */
+    background-color: orange;
+}
+
+.mobile-nav li a:hover,
+.mobile-nav li a.active {
+    background-color: orange;
+    /* Orange background on hover and active */
+    color: white;
+    /* Text color change for contrast */
+    height: 100%;
+    /* Ensure full height on active */
+    box-sizing: border-box;
+    /* To include padding in height */
+}
+
+
+
+/* Navigation Styles FOR DESKTOP */
+.desktop-nav {
+    display: flex;
+    /* Show desktop nav */
+}
+
+.desktop-nav li {
+    transition: background-color 0.3s, color 0.3s, font-size 0.3s;
+    /* Smooth transition */
+    padding: 10px 20px;
+    /* Add padding for increased hover area */
+}
+
+.desktop-nav li:hover {
+    background-color: #F08A39;
+    /* Orange background */
+    color: white;
+    /* White text */
+    font-size: 36px;
+    /* Increased font size */
+}
+
+
+/* START OF INDEX */
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background-color: #FDF8E5;
+    margin-left: 100px;
+    padding-left: 100px;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-text h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0 !important;
+}
+
+.hero-text p {
+    font-size: 2rem;
+    color: black;
+    margin-top: 0 !important;
+}
+
+.hero-text blockquote {
+    font-size: 1rem;
+    font-style: italic;
+    color: #666;
+    margin-top: 20px;
+}
+
+.hero-image img {
+    width: 800px;
+}
+
+.highlight {
+    color: #F08A39;
+    font-weight: bold;
+}
+
+/* Join Journey Section */
+.join-journey {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #F08A39;
+    position: relative;
+    overflow: hidden;
+    height: 800px;
+    color: white;
+    font-size: 150%;
+}
+
+.join-journey h2,
+.join-journey p,
+.join-journey .btn {
+    position: relative;
+    z-index: 10;
+}
+
+.join-journey .btn {
+    margin-top: 20px;
+    background-color: white;
+    color: #F08A39;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.animal-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 100%;
+    max-width: 1500px;
+    padding-top: 400px;
+}
+
+.journey-img {
+    width: 100%;
+    height: auto;
+    opacity: 0.8;
+}
+
+/* Challenges Section */
+.challenges {
+    padding: 40px;
+    background-color: #FDF8E5;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Table Styles */
+.challenges-table table {
+    width: 100%;
+    max-width: 900px;
+    border-collapse: collapse;
+    text-align: left;
+    background-color: #FDF8E5;
+}
+
+.challenges-table th,
+.challenges-table td {
+    padding: 15px;
+    border: 2px solid black;
+    color: black;
+}
+
+.challenges-table th {
+    background-color: #F08A39;
+    color: black;
+}
+
+.challenges-table td a {
+    color: black;
+    text-decoration: none;
+}
+
+/* END INDEX */
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #F08A39;
+    color: white;
+    width: 100%;
+}
+
+.social-icons img {
+    width: 50px;
+    margin: 0 10px;
+}
+
+.social-icons .fb img {
+    width: 45px;
+    height: auto;
+}
+
+.challenge-image {
+    display: none;
+}
+
+/* ABOUT US */
+/* Main content styles for Furry Feast pages */
+.furry-feast {
+    display: flex;
+    flex-direction: column;
+}
+
+.furry-feast .layout {
+    display: flex;
+    align-items: stretch;
+    /* Ensure sidebar and content stretch to equal height */
+}
+
+.furry-feast .orange-sidebar {
+    background-color: #EDA073;
+    ;
+    /* Sidebar color */
+    width: 400px;
+    /* Fixed width for the sidebar */
+    /* Padding inside the sidebar */
+    height: auto;
+    /* Ensure it stretches based on content */
+}
+
+.furry-feast .about-us {
+    flex-grow: 1;
+    /* Take the remaining space */
+    padding: 20px;
+    /* Padding for main content */
+}
+
+h3{
+    font-family: "Khand", sans-serif;
+}
+
+.furry-feast .who-we-are h3 {
+    font-size: 70px;
+    /* Example style */
+    color: #A0522D;
+    /* Example color */
+    margin: 15px 0;
+    /* Example margin */
+}
+
+.furry-feast .who-we-are-content {
+    display: flex;
+    /* Flexbox for image and text */
+    align-items: center;
+    /* Center align the image and text */
+}
+
+.furry-feast .who-we-are-content p {
+    font-size: 50px;
+    /* Reduced font size for readability */
+    color: black;
+    /* Example style */
+    margin: 10px 0;
+    /* Example style */
+    text-align: justify;
+}
+
+.furry-feast .about-image {
+    width: 600px;
+    /* Adjusted image size */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-right: 20px;
+    /* Space between image and text */
+}
+
+.furry-feast .about-us h2 {
+    font-size: 60px;
+    /* Reduced size for h2 */
+    color: black;
+    /* Example style for h2 */
+    margin: 20px 0;
+    /* Margin for h2 */
+}
+
+.furry-feast .why h3 {
+    font-size: 70px;
+    /* Reduced size for h3 */
+    color: #A0522D;
+    /* Example style */
+    margin: 15px 0;
+    /* Example style */
+}
+
+.furry-feast .why p {
+    font-size: 50px;
+    /* Reduced size for paragraph */
+    color: black;
+    /* Example style */
+    margin: 15px 0;
+    /* Example style */
+    text-align: justify;
+}
+
+
+/* Mission and Vision Section */
+.mission-vision {
+    display: flex;
+    /* Use flexbox for layout */
+    justify-content: space-between;
+    /* Space between the columns */
+    padding: 20px;
+    /* Add some padding */
+    background-color: #FDF8E5;
+    /* Background color */
+}
+
+.mission,
+.vision {
+    flex: 1;
+    /* Allow each column to take equal space */
+    padding: 20px;
+    /* Padding inside each column */
+    text-align: left;
+    /* Align text to the left */
+}
+
+.mission h3,
+.vision h3 {
+    font-size: 70px;
+    /* Reduced heading size */
+    color: #A0522D;
+    /* Example color */
+    font-weight: bold;
+    /* Make it bold */
+    margin-bottom: 10px;
+    /* Space below heading */
+}
+
+.mission p,
+.vision p {
+    font-size: 50px;
+    /* Reduced paragraph size */
+    color: black;
+    /* Example text color */
+    line-height: 1.6;
+    /* Line height for readability */
+    text-align: justify;
+}
+
+.image-section {
+    text-align: center;
+    /* Center align the image */
+    margin: 20px 0;
+    /* Add some margin above and below */
+}
+
+.mission-image {
+    width: 100%;
+    /* Full width for responsiveness */
+    max-width: 1500px;
+    /* Maximum width for larger screens */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.goal-section {
+    display: flex;
+    align-items: center;
+    /* Center items vertically */
+
+    background-color: #FDF8E5;
+    /* Background color */
+    border-radius: 10px;
+    /* Rounded corners */
+    padding-left: 0;
+    /* Margin for spacing */
+
+}
+
+.goal-section h3 {
+    font-size: 70px;
+    /* Adjust size */
+    font-weight: bold;
+    /* Make it bold */
+    color: #A0522D;
+    /* Heading color */
+    margin-right: 20px;
+    margin-left: 300px;
+    /* Space between heading and text */
+}
+
+.goal-text {
+    max-width: 800px;
+    /* Limit width */
+    text-align: center;
+    text-align: justify;
+    /* Center align text within this div */
+    flex-grow: 1;
+    /* Allow this div to take up available space */
+}
+
+.goal-text p {
+    font-size: 50px;
+    /* Adjust size */
+    color: black;
+    /* Text color */
+}
+
+/* END OF ABOUT US */
+
+/* Contact Section */
+.audioCats {
+    background-color: #F9EED8;
+    /* Soft beige background */
+    border-radius: 15px;
+    /* Rounded corners */
+    padding: 20px;
+    /* Inner spacing */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    text-align: center;
+    /* Center the text */
+    margin: 20px auto;
+    /* Center the section */
+    max-width: 800px;
+    /* Max width */
+}
+
+.audioText {
+    font-size: 1.5rem;
+    /* Increase font size */
+    color: #333;
+    /* Dark text color */
+    margin-bottom: 15px;
+    /* Space below text */
+    font-weight: 600;
+    /* Slightly bolder text */
+}
+
+.mainAudio {
+    width: 100%;
+    /* Full width */
+    outline: none;
+    /* Remove default outline */
+    border-radius: 10px;
+    /* Rounded corners */
+    background-color: #F08A39;
+    /* Match theme color */
+    color: white;
+    /* Text color */
+    padding: 10px;
+    /* Padding */
+    border: none;
+    /* Remove border */
+}
+
+/* Adjust audio controls for better visuals */
+.mainAudio::-webkit-media-controls {
+    background-color: #F08A39;
+    /* Controls background color */
+}
+
+.mainAudio::-webkit-media-controls-enclosure {
+    background-color: #F08A39;
+    /* Enclosure background */
+}
+
+.contact {
+    background-image: url(images/animalsBg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Orange background */
+    color: white;
+    /* Text color for contrast */
+    padding: 40px;
+    text-align: center;
+    /* Center text */
+    height: 1500px;
+    border-radius: 20px;
+    /* Increased radius for a softer look */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    /* Optional shadow for depth */
+    margin-top: 50px;
+}
+
+.contact-left h2 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    margin-left: -1300px;
+
+}
+
+.contact-info p {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-left h2.ready {
+    margin-left: -1370px;
+    /* Adjust this value to align as needed */
+}
+
+.contact-left {
+    margin-top: 100px;
+}
+
+.contact-info img {
+    margin-right: 10px;
+    width: 50px;
+}
+
+.contact-info p.boston {
+    margin-left: 65px;
+}
+
+/* Map and Feedback Section */
+.map-feedback {
+    padding: 20px;
+    background-color: #FDF8E5;
+    /* Yellow background */
+}
+
+.map-wrapper {
+    display: flex;
+    justify-content: center;
+    /* Center the map container */
+}
+
+.map-container {
+    margin-top: 20px;
+    /* Space above the map */
+    width: 100%;
+    /* Set the width of the map container */
+    max-width: 1000px;
+    height: auto;
+    /* Optional: limit max width */
+    align-items: center;
+    /* Align items center vertically */
+}
+
+.map-container iframe {
+    width: 100%;
+    align-items: center;
+    /* Full width of the container */
+    height: 700px;
+    /* Fixed height for the map */
+}
+
+/* Feedback Container */
+.feedback-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center content if applicable */
+    padding: 20px;
+    background-image: url(images/blackAndWhite.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Use 'cover' to fill the container */
+    background-position: center top;
+    /* Adjust as needed */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 400px;
+    /* Set a height that works for your design */
+    z-index: 500;
+}
+
+/* Feedback Section */
+.feedback {
+    font-size: 2rem;
+    flex: 3;
+    margin-right: 20px;
+    /* Space between textarea and dropdown */
+    display: flex;
+    flex-direction: column;
+    /* Stack elements vertically */
+    align-items: center;
+    /* Center items horizontally */
+    color: #F08A39;
+    text-shadow: -1px -1px 0 #000,
+        /* Left top */
+        1px -1px 0 #000,
+        /* Right top */
+        -1px 1px 0 #000,
+        /* Left bottom */
+        1px 1px 0 #000;
+    /* Right bottom */
+}
+
+.feedback label {
+    font-size: 3rem;
+    /* Increase font size */
+    color: #F08A39;
+    /* Change color if needed */
+    text-shadow:
+        -1px -1px 0 #000,
+        /* Left top */
+        1px -1px 0 #000,
+        /* Right top */
+        -1px 1px 0 #000,
+        /* Left bottom */
+        1px 1px 0 #000;
+    /* Right bottom */
+    margin-bottom: 10px;
+    /* Space below label */
+}
+
+/* Textarea Styles */
+textarea {
+    width: 80%;
+    /* Full width */
+    height: 100px;
+    /* Set height */
+    padding: 15px;
+    /* Padding inside textarea */
+    font-size: 1.1rem;
+    /* Font size */
+    border-radius: 5px;
+    /* Rounded corners */
+    border: 2px solid #F08A39;
+    /* Border color */
+    resize: none;
+    /* Prevent resizing */
+    transition: border-color 0.3s;
+    /* Smooth transition */
+}
+
+/* Textarea Focus State */
+textarea:focus {
+    border-color: #FFA500;
+    /* Change border color on focus */
+    outline: none;
+    /* Remove default outline */
+}
+
+/* Dropdown and Button Container */
+.select-container {
+    display: flex;
+    /* Keep elements in the same row */
+    align-items: center;
+    /* Align items vertically centered */
+    margin-right: 300px;
+    /* Adjust as needed */
+    color: #F08A39;
+    text-shadow: -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+.select-container button {
+    margin-left: 10px;
+    /* Adjust this value to move the button left */
+}
+
+.select-container label {
+    margin-right: 5px;
+    /* Space between the label and dropdown */
+    white-space: nowrap;
+    /* Prevent the label from wrapping */
+    font-size: 3rem;
+}
+
+/* Label Styles */
+label {
+    font-size: 1.5rem;
+    /* Label font size */
+    margin-bottom: 5px;
+    /* Space below label */
+}
+
+/* Dropdown Styles */
+select {
+    padding: 10px;
+    /* Padding inside dropdown */
+    font-size: 1rem;
+    /* Font size */
+    border-radius: 5px;
+    /* Rounded corners */
+    border: 2px solid #F08A39;
+    /* Border color */
+    background-color: #fff;
+    /* Background color */
+    transition: border-color 0.3s;
+    /* Smooth transition */
+}
+
+/* Dropdown Focus State */
+select:focus {
+    border-color: #FFA500;
+    /* Change border color on focus */
+    outline: none;
+    /* Remove default outline */
+}
+
+/* Button Styles */
+button {
+    margin-left: 10px;
+    /* Space between dropdown and button */
+    background-color: #F08A39;
+    /* Button color */
+    color: white;
+    /* Text color */
+    border: none;
+    /* No border */
+    padding: 12px 25px;
+    /* Padding */
+    border-radius: 25px;
+    /* Rounded corners */
+    font-weight: bold;
+    /* Bold text */
+    font-size: 1.1rem;
+    /* Font size */
+    cursor: pointer;
+    /* Pointer cursor */
+    transition: background-color 0.3s, transform 0.2s;
+    /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow */
+    /* Remove any margin-top to keep it aligned with the dropdown */
+}
+
+/* Button Hover State */
+button:hover {
+    background-color: #D07B29;
+    /* Darker shade on hover */
+    transform: translateY(-2px);
+    /* Slight lift effect on hover */
+}
+
+/* Button Active State */
+button:active {
+    transform: translateY(1px);
+    /* Slight press effect */
+}
+
+.spacer-section {
+    background-color: #FDF8E5;
+    /* Light background color to contrast the footer */
+    padding: 50px 0;
+    /* Add padding for spacing */
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* END OF CONTACT */
+
+/* to fix ready to help contact us today  */
+@media (min-width: 1025px) and (max-width: 1850px) {
+    .contact {
+        width: 100%;
+    }
+
+    .contact-left h2.ready {
+        margin-left: -545px;
+        text-align: center;
+        /* Adjust this value to align as needed */
+    }
+
+    .contact-left h2.contactt {
+        margin-left: -470px;
+        text-align: center;
+
+    }
+}
+
+
+
+/* Tablet (768px to 1024px) */
+@media (max-width: 1024px) {
+    header {
+        padding: 40px;
+    }
+
+    .logo img {
+        margin-left: 0px;
+        width: 80px;
+        height: 80px;
+    }
+
+    nav ul {
+        margin-right: 50px;
+    }
+
+    nav ul li {
+        margin-left: 50px;
+        font-size: 24px;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding-left: 50px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .hero-image img {
+        width: 500px;
+        margin-top: 20px;
+    }
+
+    .join-journey {
+        height: 600px;
+    }
+
+    .animal-image {
+        padding-top: 200px;
+    }
+
+    .challenges {
+        padding: 20px;
+    }
+
+    .challenges-table th,
+    .challenges-table td {
+        padding: 10px;
+    }
+
+    .challenge-image {
+        display: none;
+    }
+
+    /* ABOUT TABLET */
+    .furry-feast {
+        flex-direction: column;
+        min-height: auto;
+        /* Stack sidebar and content vertically */
+    }
+
+    .furry-feast .orange-sidebar {
+        width: 100%;
+        /* Full width for sidebar */
+        /* Space below sidebar */
+        flex-direction: column;
+        display: flex;
+        padding: 0px;
+
+    }
+
+    .furry-feast .about-us {
+        padding: 15px;
+        /* Redadding */
+        flex-grow: 1;
+    }
+
+
+
+    .furry-feast .who-we-are-content {
+        flex-direction: column;
+        /* Stack image and text */
+        align-items: center;
+        /* Center align */
+    }
+
+    .furry-feast .about-image {
+        width: 100%;
+        /* Full width for image */
+        max-width: 400px;
+        /* Limit size on smaller screens */
+        margin-right: 0;
+        /* Remove right margin */
+        margin-bottom: 15px;
+        /* Space below image */
+    }
+
+    .goal-section h3 {
+        margin: 20px auto;
+        /* Center with auto margins */
+
+        /* Adjust heading size */
+    }
+
+    /* Contact TABLET */
+
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        /* Stack items vertically */
+        align-items: flex-start;
+        /* Align items to the left */
+        padding: 20px;
+        /* Adjust padding */
+        text-align: left;
+        /* Ensure text is left-aligned */
+    }
+
+    .contact-left {
+        margin-bottom: 20px;
+        /* Space below the contact section */
+    }
+
+    .contact-info {
+        font-size: 1.2rem;
+        /* Adjust font size for contact info */
+    }
+
+    .contact-info p {
+        margin: 5px 0;
+        /* Space between contact info lines */
+    }
+
+    .contact-info img {
+        margin-right: 10px;
+        /* Space between icon and text */
+        vertical-align: middle;
+        /* Align icon with text */
+    }
+
+    .contact-left h2.ready {
+        text-align: center;
+        font-size: 90px;
+        margin-left: -90px;
+    }
+
+    .contact-left h2.contactt {
+        margin-left: 25px;
+        font-size: 90px;
+    }
+
+    .feedback-container {
+        display: flex;
+        flex-direction: column;
+        /* Stack elements vertically */
+        align-items: center;
+        /* Center horizontally */
+        justify-content: center;
+        /* Center vertically */
+        padding: 20px;
+        /* Add some padding */
+    }
+
+    .feedback {
+        width: 100%;
+        /* Full width */
+        max-width: 600px;
+        /* Set a max width */
+        margin-bottom: 20px;
+        /* Space below */
+        text-align: center;
+        /* Center text */
+    }
+
+    .select-container {
+        display: flex;
+        /* Use flexbox */
+        flex-direction: row;
+        /* Stack elements vertically */
+        align-items: center;
+        /* Center horizontally */
+        justify-content: center;
+        /* Center vertically */
+        width: 100%;
+        /* Full width */
+        max-width: 600px;
+        /* Set a max width */
+        text-align: center;
+        /* Center text */
+
+    }
+
+    .select-container label {
+        margin-bottom: 5px;
+        /* Space below label */
+    }
+
+    /* Style for the rating dropdown */
+    #rating {
+        margin-bottom: 10px;
+        /* Space below dropdown */
+    }
+
+
+
+    /* Make feedback and rating appear side by side */
+    .feedback-container {
+        flex-direction: row;
+        /* Change to row layout */
+        justify-content: space-between;
+        /* Space between elements */
+        width: 100%;
+        /* Full width */
+        max-width: 1100px;
+        /* Optional: Set a max width */
+    }
+
+    .feedback,
+    .select-container {
+        flex: 1;
+        /* Allow both to grow equally */
+        margin: 0 10px;
+        /* Space between feedback and rating */
+    }
+
+
+
+
+
+
+}
+
+
+
+
+
+/* Mobile (up to 767px) */
+@media (max-width: 767px) {
+    header {
+        flex-direction: row-reverse;
+        /* Change direction to reverse */
+        justify-content: space-between;
+        /* Maintain space between items */
+        text-align: center;
+        /* Center items */
+
+    }
+
+    .logo {
+        margin-right: 0;
+        /* Adjust margin for mobile */
+    }
+
+    .logo h1 {
+        display: flex;
+        /* Use flex to align children */
+        justify-content: center;
+        /* Center the text */
+        align-items: center;
+        /* Center vertically */
+    }
+
+    .logo img {
+        margin-left: 0;
+        width: 60px;
+        height: 60px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        /* Stack items vertically */
+        padding: 0;
+        margin: 0;
+    }
+
+    /* burger */
+    .burger {
+        display: block;
+
+        /* Show burger menu on mobile */
+    }
+
+    .mobile-nav.show {
+        display: flex;
+        /* Show the mobile menu when toggled */
+    }
+
+    .furry,
+    .feast {
+        margin: 0 5px;
+        /* Add some space between words */
+    }
+
+
+
+
+
+
+    .desktop-nav {
+        display: none;
+        /* Hide desktop navigation on mobile */
+    }
+
+
+
+
+
+
+
+    .hero {
+        flex-direction: column;
+        padding: 20px;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .hero-text h2,
+    .hero-text p {
+        font-size: 1.5rem;
+    }
+
+    .hero-image img {
+        width: 300px;
+        margin-top: 20px;
+        margin-left: 40px;
+    }
+
+    .join-journey {
+        padding: 30px 10px;
+        font-size: 120%;
+        height: 500px;
+    }
+
+    .animal-image {
+        padding-top: 100px;
+    }
+
+    .challenges {
+        padding: 20px;
+    }
+
+    .challenges-table th,
+    .challenges-table td {
+        padding: 8px;
+    }
+
+    .challenges-table table {
+        max-width: 100%;
+    }
+
+
+    footer {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .social-icons img {
+        width: 40px;
+    }
+
+    .social-icons .fb img {
+        width: 35px;
+    }
+
+
+    /* Hide the table and show the image on mobile devices */
+    .challenges-table {
+        display: none;
+    }
+
+    .challenge-image {
+        display: block;
+        /* Ensure it's set to block on mobile */
+        text-align: center;
+        background-color: rgba(255, 0, 0, 0.5);
+        /* Temporary background color */
+    }
+
+    .challenge-image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* about us */
+    .furry-feast .layout {
+        flex-direction: row;
+        /* Keep the sidebar on the left */
+    }
+
+    .furry-feast .orange-sidebar {
+        width: 10%;
+        /* Adjust the sidebar width for mobile */
+        padding: 10px;
+    }
+
+    .furry-feast .about-us {
+        width: 70%;
+        /* Adjust the content width for mobile */
+        padding: 15px;
+    }
+
+    .furry-feast .about-us h2 {
+        font-size: 35px;
+    }
+
+    .furry-feast .who-we-are h3 {
+        font-size: 40px;
+        color: #A0522D;
+        margin: 15px 0;
+    }
+
+    .who-we-are h2 {
+        color: #A0522D;
+    }
+
+    .furry-feast .who-we-are-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .furry-feast .about-image {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 15px;
+    }
+
+    .furry-feast .who-we-are-content p {
+        font-size: 18px;
+        text-align: justify;
+    }
+
+    .furry-feast .why h3 {
+        font-size: 40px;
+        color: #A0522D;
+        margin: 15px 0;
+    }
+
+    .furry-feast .why p {
+        font-size: 18px;
+        text-align: justify;
+    }
+
+    .mission-vision {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .mission,
+    .vision {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .mission h3,
+    .vision h3 {
+        font-size: 40px;
+    }
+
+    .mission p,
+    .vision p {
+        font-size: 18px;
+        text-align: justify;
+    }
+
+    .image-section {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+    }
+
+    .goal-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .goal-section h3 {
+        font-size: 40px;
+        margin: 20px 0;
+    }
+
+    .goal-text p {
+        text-align: justify;
+        font-size: 18px;
+    }
+
+    /*CONTACT PAGE*/
+    .audioCats {
+        display: none;
+    }
+
+    .contact {
+        padding: 20px;
+        text-align: center;
+        height: 500px;
+        /* Center text for better mobile view */
+        height: 760px;
+        /* Set a height for your element */
+        margin-top: 20px;
+
+    }
+
+    .contact-left {
+        margin: 0;
+        /* Remove margin for mobile */
+        padding: 10px;
+        /* Add padding for spacing */
+        height: 20px;
+    }
+
+
+
+
+    .contact-left h2.ready {
+        font-size: 40px;
+        margin-left: -20px;
+    }
+
+    .contact-left h2.contactt {
+        font-size: 40px;
+    }
+
+    .contact-info p {
+        font-size: 1.5rem;
+        /* Smaller font size for contact info */
+        margin: 5px 0;
+        /* Adjust margins */
+    }
+
+    .contact-info img {
+        width: 30px;
+        /* Smaller icons for mobile */
+    }
+
+
+    .map-feedback {
+        padding: 10px;
+        /* Adjust padding for mobile */
+    }
+
+    .map-container iframe {
+        height: 300px;
+        /* Adjust height for the map */
+    }
+
+    .feedback-container {
+        flex-direction: column;
+        /* Stack feedback elements */
+        padding: 20px;
+        /* Adjust padding */
+    }
+
+    .feedback {
+        margin-bottom: 20px;
+        /* Space below feedback section */
+    }
+
+    .select-container {
+        margin-top: -10px;
+        flex-direction: column;
+        /* Stack dropdown and button */
+        align-items: center;
+        /* Center items */
+    }
+
+    .select-container button {
+        margin-top: -5px;
+        /* Space above button */
+        margin-left: -10px;
+    }
+
+    .rating-label {
+        margin-left: 15px;
+    }
+
+    #rating {
+        margin-top: -10px;
+    }
+}
+
+@media print {
+
+    /* General styles for printing */
+    body {
+        background-color: white;
+        /* Ensure a white background for printing */
+        color: black;
+        /* Print text in black */
+    }
+
+    header,
+    footer {
+        display: none;
+        /* Hide header and footer */
+    }
+
+    /* INDEX */
+    .burger,
+    .mobile-nav,
+    .desktop-nav {
+        display: none;
+        /* Hide navigation elements */
+    }
+
+    .hero,
+    .join-journey,
+    .challenges {
+        padding: 0;
+        /* Remove padding */
+        margin: 0;
+        /* Remove margins */
+    }
+
+    .join-journey {
+        display: none;
+    }
+
+    /* Tables */
+    .challenges-table {
+        display: table;
+        /* Ensure tables are displayed */
+    }
+
+    .challenges-table th,
+    .challenges-table td {
+        border: 1px solid #000;
+        /* Add borders to table cells */
+    }
+
+    .challenges-table img {
+        max-width: 100%;
+        /* Ensure images fit within the page */
+        height: auto;
+        /* Maintain aspect ratio */
+    }
+
+    /* Hide elements that are not needed in print */
+    .challenge-image,
+    .animal-image {
+        display: none;
+        /* Hide images */
+    }
+
+
+    /* ABOUT and INDEX*/
+
+    /* Adjust font sizes for printing */
+    h1,
+    h2,
+    h3,
+    p {
+        font-size: 12pt;
+        /* Set font size for print */
+    }
+
+    /* Any other specific styles for print */
+
+    /* CONTACT */
+    .contact {
+        margin-top: 30px;
+        border: 1px solid #000;
+        /* Add border for clarity */
+    }
+
+    .contact-info p {
+        margin: 10px 0;
+        /* Space out contact info */
+    }
+
+    .map-container {
+        display: none;
+        /* Hide the map in print */
+    }
+
+    .feedback-container {
+        display: none;
+        /* Hide the feedback section in print */
+    }
+
+    .audioCats {
+        display: none;
+        /* Hide audio section in print */
+    }
+
+    .spacer-section {
+        display: none;
+        /* Hide spacer section */
+    }
+
+    .feedback {
+        margin-top: 20px;
+        /* Add top margin for feedback */
+    }
+
+    .select-container {
+        margin-top: 10px;
+        /* Add margin for select container */
+    }
+
+    button {
+        display: none;
+        /* Hide the submit button */
+    }
+
+
+}
